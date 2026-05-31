@@ -24,19 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${jetbrainsMono.variable} scroll-smooth`}>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                document.documentElement.classList.add('dark');
-              } else {
-                document.documentElement.classList.remove('dark');
-              }
-            `,
-          }}
-        />
-      </head>
+      <head />
       <body className="bg-background text-on-background font-body-md text-body-md mesh-bg antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
         {children}
       </body>

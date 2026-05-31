@@ -7,13 +7,18 @@ export function Navbar() {
   const [isDark, setIsDark] = React.useState<boolean>(false);
 
   React.useEffect(() => {
-    const hasDarkClass = document.documentElement.classList.contains("dark");
-    if (hasDarkClass) {
-      const timer = setTimeout(() => {
-        setIsDark(true);
-      }, 0);
-      return () => clearTimeout(timer);
+    const storedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const isThemeDark = storedTheme === "dark" || (!storedTheme && prefersDark);
+    if (isThemeDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
+    const timer = setTimeout(() => {
+      setIsDark(isThemeDark);
+    }, 0);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleToggle = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -51,7 +56,7 @@ export function Navbar() {
           className="font-headline-lg text-headline-md text-primary hover:text-primary-container transition-all duration-200 opacity-80 scale-95"
           href="#"
         >
-          dev.init()
+          dev.init("Brian")
         </a>
         <div className="hidden md:flex space-x-lg md:space-x-8">
           <a
