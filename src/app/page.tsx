@@ -12,6 +12,7 @@ export default function PortfolioPage() {
     <>
       <Navbar />
       <main className="w-full min-w-0 max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-24 md:pt-32 pb-16 md:pb-24 space-y-20 md:space-y-32 flex-1">
+        <h1 className="sr-only">Brian A. Obanil - Senior Full Stack Developer Portfolio</h1>
         <Hero />
         <About />
         <Skills />

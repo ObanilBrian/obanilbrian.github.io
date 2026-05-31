@@ -10,11 +10,11 @@ export function Experience() {
         <div className="h-px w-full bg-gradient-to-r from-outline-variant to-transparent"></div>
       </div>
       <div>
-        <h4 className="font-headline-md text-headline-xs text-primary mb-3 md:mb-4">
+        <h3 className="font-headline-md text-headline-xs text-primary mb-3 md:mb-4">
           <span className="text-tertiary">brian@portfolio</span>
           <span className="text-on-surface">:</span>
           <span className="text-primary-container">~$</span> git log --all
-        </h4>
+        </h3>
       </div>
       <div className="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 md:p-8 font-code-block text-code-block break-words space-y-8 md:space-y-10">
         {/* Arch Global Services */}
