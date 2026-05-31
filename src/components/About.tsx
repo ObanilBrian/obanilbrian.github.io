@@ -7,8 +7,8 @@ export function About() {
     <section className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center" id="about">
       <div className="md:col-span-5 relative">
         <div className="absolute inset-0 bg-primary-container/20 blur-3xl rounded-full"></div>
-        <div className="relative bg-surface-container rounded-xl border border-outline-variant p-6 md:p-8 aspect-square flex flex-col items-center justify-center space-y-6 md:space-y-8">
-          <Image src="/avatar.webp" alt="Brian A. Obanil Avatar" width={400} height={400} unoptimized className="object-cover border border-outline-variant" />
+        <div className="relative bg-surface-container rounded-xl border border-outline-variant p-6 md:p-8 md:aspect-square flex flex-col items-center justify-center space-y-6 md:space-y-8">
+          <Image src="/avatar.webp" alt="Brian A. Obanil Avatar" width={400} height={400} unoptimized className="w-full max-w-[300px] md:max-w-full aspect-square object-cover border border-outline-variant" />
           <div className="flex space-x-4">
             <a
               className="text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center w-8 h-8"
