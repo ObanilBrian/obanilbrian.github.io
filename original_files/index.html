@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Brian A. Obanil - Full Stack Developer</title>
+        <script>
+                if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                        document.documentElement.classList.add('dark');
+                } else {
+                        document.documentElement.classList.remove('dark');
+                }
+        </script>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "on-secondary": "rgb(var(--on-secondary) / <alpha-value>)",
+                                                "tertiary-container": "rgb(var(--tertiary-container) / <alpha-value>)",
+                                                "tertiary-fixed": "rgb(var(--tertiary-fixed) / <alpha-value>)",
+                                                "tertiary-fixed-dim": "rgb(var(--tertiary-fixed-dim) / <alpha-value>)",
+                                                "surface-dim": "rgb(var(--surface-dim) / <alpha-value>)",
+                                                "on-error": "rgb(var(--on-error) / <alpha-value>)",
+                                                "tertiary": "rgb(var(--tertiary) / <alpha-value>)",
+                                                "on-error-container": "rgb(var(--on-error-container) / <alpha-value>)",
+                                                "secondary": "rgb(var(--secondary) / <alpha-value>)",
+                                                "inverse-primary": "rgb(var(--inverse-primary) / <alpha-value>)",
+                                                "error": "rgb(var(--error) / <alpha-value>)",
+                                                "on-surface": "rgb(var(--on-surface) / <alpha-value>)",
+                                                "on-surface-variant": "rgb(var(--on-surface-variant) / <alpha-value>)",
+                                                "inverse-on-surface": "rgb(var(--inverse-on-surface) / <alpha-value>)",
+                                                "on-primary-fixed": "rgb(var(--on-primary-fixed) / <alpha-value>)",
+                                                "background": "rgb(var(--background) / <alpha-value>)",
+                                                "on-tertiary-container": "rgb(var(--on-tertiary-container) / <alpha-value>)",
+                                                "on-primary-fixed-variant": "rgb(var(--on-primary-fixed-variant) / <alpha-value>)",
+                                                "surface-container-high": "rgb(var(--surface-container-high) / <alpha-value>)",
+                                                "on-secondary-fixed-variant": "rgb(var(--on-secondary-fixed-variant) / <alpha-value>)",
+                                                "secondary-fixed": "rgb(var(--secondary-fixed) / <alpha-value>)",
+                                                "surface-container-highest": "rgb(var(--surface-container-highest) / <alpha-value>)",
+                                                "on-primary": "rgb(var(--on-primary) / <alpha-value>)",
+                                                "primary-container": "rgb(var(--primary-container) / <alpha-value>)",
+                                                "inverse-surface": "rgb(var(--inverse-surface) / <alpha-value>)",
+                                                "on-primary-container": "rgb(var(--on-primary-container) / <alpha-value>)",
+                                                "primary": "rgb(var(--primary) / <alpha-value>)",
+                                                "on-tertiary-fixed": "rgb(var(--on-tertiary-fixed) / <alpha-value>)",
+                                                "on-tertiary": "rgb(var(--on-tertiary) / <alpha-value>)",
+                                                "primary-fixed-dim": "rgb(var(--primary-fixed-dim) / <alpha-value>)",
+                                                "on-tertiary-fixed-variant": "rgb(var(--on-tertiary-fixed-variant) / <alpha-value>)",
+                                                "on-secondary-container": "rgb(var(--on-secondary-container) / <alpha-value>)",
+                                                "surface": "rgb(var(--surface) / <alpha-value>)",
+                                                "secondary-fixed-dim": "rgb(var(--secondary-fixed-dim) / <alpha-value>)",
+                                                "surface-tint": "rgb(var(--surface-tint) / <alpha-value>)",
+                                                "primary-fixed": "rgb(var(--primary-fixed) / <alpha-value>)",
+                                                "surface-bright": "rgb(var(--surface-bright) / <alpha-value>)",
+                                                "secondary-container": "rgb(var(--secondary-container) / <alpha-value>)",
+                                                "outline-variant": "rgb(var(--outline-variant) / <alpha-value>)",
+                                                "on-secondary-fixed": "rgb(var(--on-secondary-fixed) / <alpha-value>)",
+                                                "outline": "rgb(var(--outline) / <alpha-value>)",
+                                                "on-background": "rgb(var(--on-background) / <alpha-value>)",
+                                                "surface-container-lowest": "rgb(var(--surface-container-lowest) / <alpha-value>)",
+                                                "surface-container-low": "rgb(var(--surface-container-low) / <alpha-value>)",
+                                                "surface-container": "rgb(var(--surface-container) / <alpha-value>)",
+                                                "error-container": "rgb(var(--error-container) / <alpha-value>)",
+                                                "surface-variant": "rgb(var(--surface-variant) / <alpha-value>)"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.125rem",
+                                                "lg": "0.25rem",
+                                                "xl": "0.5rem",
+                                                "full": "0.75rem"
+                                        },
+                                        "spacing": {
+                                                "md": "16px",
+                                                "xs": "4px",
+                                                "margin-desktop": "40px",
+                                                "lg": "24px",
+                                                "xl": "32px",
+                                                "gutter": "16px",
+                                                "sm": "8px",
+                                                "margin-mobile": "16px",
+                                                "base": "4px"
+                                        },
+                                        "fontFamily": {
+                                                "body-lg": [
+                                                        "JetBrains Mono"
+                                                ],
+                                                "headline-lg": [
+                                                        "JetBrains Mono"
+                                                ],
+                                                "label-md": [
+                                                        "JetBrains Mono"
+                                                ],
+                                                "headline-md": [
+                                                        "JetBrains Mono"
+                                                ],
+                                                "code-block": [
+                                                        "JetBrains Mono"
+                                                ],
+                                                "headline-sm": [
+                                                        "JetBrains Mono"
+                                                ],
+                                                "body-md": [
+                                                        "JetBrains Mono"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "body-lg": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "1.6",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "headline-lg": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "1.2",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "label-md": [
+                                                        "12px",
+                                                        {
+                                                                "lineHeight": "1",
+                                                                "letterSpacing": "0.05em",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "headline-md": [
+                                                        "24px",
+                                                        {
+                                                                "lineHeight": "1.3",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "code-block": [
+                                                        "13px",
+                                                        {
+                                                                "lineHeight": "1.7",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "headline-sm": [
+                                                        "20px",
+                                                        {
+                                                                "lineHeight": "1.4",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "body-md": [
+                                                        "14px",
+                                                        {
+                                                                "lineHeight": "1.5",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                :root {
+                        --on-secondary: 255 255 255;
+                        --tertiary-container: 27 111 36;
+                        --tertiary-fixed: 161 247 154;
+                        --tertiary-fixed-dim: 134 218 128;
+                        --surface-dim: 217 218 219;
+                        --on-error: 255 255 255;
+                        --tertiary: 0 85 18;
+                        --on-error-container: 147 0 10;
+                        --secondary: 162 33 160;
+                        --inverse-primary: 168 200 255;
+                        --error: 186 26 26;
+                        --on-surface: 25 28 29;
+                        --on-surface-variant: 66 71 82;
+                        --inverse-on-surface: 240 241 242;
+                        --on-primary-fixed: 0 27 61;
+                        --background: 248 249 250;
+                        --on-tertiary-container: 154 239 147;
+                        --on-primary-fixed-variant: 0 70 139;
+                        --surface-container-high: 231 232 233;
+                        --on-secondary-fixed-variant: 129 0 129;
+                        --secondary-fixed: 255 215 245;
+                        --surface-container-highest: 225 227 228;
+                        --on-primary: 255 255 255;
+                        --primary-container: 0 95 184;
+                        --inverse-surface: 46 49 50;
+                        --on-primary-container: 202 220 255;
+                        --primary: 0 72 141;
+                        --on-tertiary-fixed: 0 34 3;
+                        --on-tertiary: 255 255 255;
+                        --primary-fixed-dim: 168 200 255;
+                        --on-tertiary-fixed-variant: 0 83 17;
+                        --on-secondary-container: 116 0 117;
+                        --surface: 248 249 250;
+                        --secondary-fixed-dim: 255 170 244;
+                        --surface-tint: 0 93 181;
+                        --primary-fixed: 214 227 255;
+                        --surface-bright: 248 249 250;
+                        --secondary-container: 253 119 245;
+                        --outline-variant: 194 198 212;
+                        --on-secondary-fixed: 56 0 56;
+                        --outline: 114 119 131;
+                        --on-background: 25 28 29;
+                        --surface-container-lowest: 255 255 255;
+                        --surface-container-low: 243 244 245;
+                        --surface-container: 237 238 239;
+                        --error-container: 255 218 214;
+                        --surface-variant: 225 227 228;
+                }
+
+                .dark {
+                        --on-secondary: 91 0 92;
+                        --tertiary-container: 0 83 17;
+                        --tertiary-fixed: 161 247 154;
+                        --tertiary-fixed-dim: 134 218 128;
+                        --surface-dim: 14 17 18;
+                        --on-error: 105 0 5;
+                        --tertiary: 134 218 128;
+                        --on-error-container: 255 218 214;
+                        --secondary: 255 170 244;
+                        --inverse-primary: 0 72 141;
+                        --error: 255 180 171;
+                        --on-surface: 225 227 228;
+                        --on-surface-variant: 194 198 212;
+                        --inverse-on-surface: 25 28 29;
+                        --on-primary-fixed: 214 227 255;
+                        --background: 17 19 20;
+                        --on-tertiary-container: 161 247 154;
+                        --on-primary-fixed-variant: 168 200 255;
+                        --surface-container-high: 40 42 43;
+                        --on-secondary-fixed-variant: 255 170 244;
+                        --secondary-fixed: 255 215 245;
+                        --surface-container-highest: 51 53 54;
+                        --on-primary: 0 48 98;
+                        --primary-container: 0 70 139;
+                        --inverse-surface: 225 227 228;
+                        --on-primary-container: 214 227 255;
+                        --primary: 168 200 255;
+                        --on-tertiary-fixed: 134 218 128;
+                        --on-tertiary: 0 57 10;
+                        --primary-fixed-dim: 168 200 255;
+                        --on-tertiary-fixed-variant: 161 247 154;
+                        --on-secondary-container: 255 170 244;
+                        --surface: 17 19 20;
+                        --secondary-fixed-dim: 255 170 244;
+                        --surface-tint: 168 200 255;
+                        --primary-fixed: 214 227 255;
+                        --surface-bright: 56 58 59;
+                        --secondary-container: 116 0 117;
+                        --outline-variant: 66 71 82;
+                        --on-secondary-fixed: 255 215 245;
+                        --outline: 140 145 158;
+                        --on-background: 225 227 228;
+                        --surface-container-lowest: 11 14 15;
+                        --surface-container-low: 25 28 29;
+                        --surface-container: 29 32 33;
+                        --error-container: 147 0 10;
+                        --surface-variant: 66 71 82;
+                }
+
+                html {
+                        scroll-behavior: smooth;
+                        scroll-padding-top: 6rem;
+                        /* Offset for sticky navigation bar (h-24) */
+                }
+
+                .mesh-bg {
+                        background-image:
+                                radial-gradient(at 0% 0%, rgba(var(--primary-container), 0.08) 0px, transparent 50%),
+                                radial-gradient(at 100% 100%, rgba(var(--tertiary-container), 0.08) 0px, transparent 50%);
+                        background-attachment: fixed;
+                }
+
+                .code-keyword {
+                        color: rgb(var(--primary));
+                }
+
+                .code-string {
+                        color: rgb(var(--tertiary));
+                }
+
+                .code-property {
+                        color: rgb(var(--secondary));
+                }
+
+                .code-function {
+                        color: rgb(var(--surface-tint));
+                }
+
+                .code-punctuation {
+                        color: rgb(var(--on-surface-variant));
+                }
+
+                .git-commit {
+                        color: rgb(var(--secondary));
+                }
+
+                .git-author {
+                        color: rgb(var(--tertiary));
+                }
+
+                .git-date {
+                        color: rgb(var(--outline));
+                }
+
+                /* View Transitions dark mode reveal animation */
+                ::view-transition-old(root),
+                ::view-transition-new(root) {
+                        animation: none;
+                        mix-blend-mode: normal;
+                }
+
+                ::view-transition-old(root) {
+                        z-index: 1;
+                }
+
+                ::view-transition-new(root) {
+                        z-index: 9999;
+                        animation: 500ms cubic-bezier(0.4, 0, 0.2, 1) reveal-theme;
+                }
+
+                @keyframes reveal-theme {
+                        from {
+                                clip-path: circle(0% at var(--click-x, calc(100% - 40px)) var(--click-y, 32px));
+                        }
+
+                        to {
+                                clip-path: circle(150% at var(--click-x, calc(100% - 40px)) var(--click-y, 32px));
+                        }
+                }
+        </style>
+</head>
+
+<body
+        class="bg-background text-on-background font-body-md text-body-md mesh-bg antialiased selection:bg-primary-container selection:text-on-primary-container">
+        <!-- TopNavBar -->
+        <nav
+                class="bg-surface/80 backdrop-blur-md text-primary font-body-md text-body-md fixed top-0 w-full z-50 border-b border-outline-variant">
+                <div
+                        class="max-w-7xl mx-auto flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16">
+                        <a class="font-headline-lg text-headline-md text-primary hover:text-primary-container transition-colors duration-200 opacity-80 scale-95 transition-all"
+                                href="#">
+                                dev.init()
+                        </a>
+                        <div class="hidden md:flex space-x-lg md:space-x-8">
+                                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="#root">root</a>
+                                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="#about">about</a>
+                                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="#skills">skills</a>
+                                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="#experience">experience</a>
+                                <a class="text-on-surface-variant hover:text-primary transition-colors duration-200"
+                                        href="#projects">projects</a>
+                        </div>
+                        <button id="theme-toggle" aria-label="Toggle theme"
+                                class="hover:text-primary transition-colors duration-200 opacity-80 scale-95 transition-all">
+                                <span class="material-symbols-outlined">dark_mode</span>
+                        </button>
+                </div>
+        </nav>
+        <main
+                class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pt-24 md:pt-32 pb-16 md:pb-24 space-y-20 md:space-y-32">
+                <!-- Hero Section: Terminal -->
+                <section class="flex flex-col items-center justify-center min-h-[614px]" id="root">
+                        <div
+                                class="w-full max-w-4xl bg-surface-container-lowest rounded-lg border border-outline-variant shadow-lg overflow-hidden backdrop-blur-sm">
+                                <!-- Terminal Header -->
+                                <div
+                                        class="bg-surface-container px-md py-sm flex items-center justify-between border-b border-outline-variant">
+                                        <div class="flex space-x-2">
+                                                <div class="w-3 h-3 rounded-full bg-error"></div>
+                                                <div class="w-3 h-3 rounded-full bg-secondary-container"></div>
+                                                <div class="w-3 h-3 rounded-full bg-tertiary-container"></div>
+                                        </div>
+                                        <div
+                                                class="font-code-block text-code-block text-on-surface-variant text-center flex-1">
+                                                developer.js - ~/portfolio</div>
+                                </div>
+                                <!-- Terminal Content -->
+                                <div class="p-lg font-code-block text-code-block overflow-x-auto">
+                                        <pre class="m-0 leading-loose"><span class="code-keyword">const</span> <span class="code-property">Developer</span> <span class="code-punctuation">= {</span>
+    <span class="code-property">name</span><span class="code-punctuation">:</span> <span class="code-string">"Brian A. Obanil"</span><span class="code-punctuation">,</span>
+    <span class="code-property">role</span><span class="code-punctuation">:</span> <span class="code-string">"Full Stack Developer"</span><span class="code-punctuation">,</span>
+    <span class="code-property">status</span><span class="code-punctuation">:</span> <span class="code-string">"Actively building solutions"</span><span class="code-punctuation">,</span>
+    <span class="code-property">links</span><span class="code-punctuation">:</span> {
+        <span class="code-property">email</span><span class="code-punctuation">:</span> <span class="code-string">"<a href="mailto:obanil.brian@outlook.com" class="underline">obanil.brian@outlook.com</a>"</span><span class="code-punctuation">,</span>
+        <span class="code-property">github</span><span class="code-punctuation">:</span> <span class="code-string">"<a href="https://github.com/ObanilBrian" class="underline">https://github.com/ObanilBrian</a>"</span><span class="code-punctuation">,</span>
+        <span class="code-property">linkedin</span><span class="code-punctuation">:</span> <span class="code-string">"<a href="https://www.linkedin.com/in/obanilbrian" class="underline">https://www.linkedin.com/in/obanilbrian</a>"</span><span class="code-punctuation">,</span>
+    }
+    <span class="code-function">init</span><span class="code-punctuation">:</span> <span class="code-keyword">function</span><span class="code-punctuation">() {</span>
+        <span class="code-property">console</span><span class="code-punctuation">.</span><span class="code-function">log</span><span class="code-punctuation">(</span><span class="code-string">`Hello, World! I am ${</span><span class="code-keyword">this</span><span class="code-punctuation">.</span><span class="code-property">name</span><span class="code-string">}.`</span><span class="code-punctuation">);</span>
+    <span class="code-punctuation">}</span>
+<span class="code-punctuation">};</span>
+
+<span class="code-property">Developer</span><span class="code-punctuation">.</span><span class="code-function">init</span><span class="code-punctuation">();</span> <span class="code-punctuation">// Output: Hello, World! I am Brian A. Obanil.</span>
+<span class="animate-pulse">_</span>
+</pre>
+                                </div>
+                        </div>
+                </section>
+                <!-- About Section -->
+                <section class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-center" id="about">
+                        <div class="md:col-span-5 relative">
+                                <div class="absolute inset-0 bg-primary-container/20 blur-3xl rounded-full"></div>
+                                <div
+                                        class="relative bg-surface-container rounded-xl border border-outline-variant p-6 md:p-8 aspect-square flex flex-col items-center justify-center space-y-6 md:space-y-8">
+                                        <img src="/avatar.webp" />
+                                        <div class="flex space-x-4">
+                                                <a class="text-on-surface-variant hover:text-primary transition-colors"
+                                                        href="mailto:obanil.brian@outlook.com"
+                                                        title="obanil.brian@outlook.com"><span
+                                                                class="material-symbols-outlined text-3xl">mail</span></a>
+                                                <a class="text-on-surface-variant hover:text-primary transition-colors"
+                                                        href="https://www.linkedin.com/in/obanilbrian" target="_blank"
+                                                        title="LinkedIn"><span
+                                                                class="material-symbols-outlined text-3xl">group</span></a>
+                                                <a class="text-on-surface-variant hover:text-primary transition-colors"
+                                                        href="https://github.com/ObanilBrian" target="_blank"
+                                                        title="GitHub"><span
+                                                                class="material-symbols-outlined text-3xl">code</span></a>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="md:col-span-7 space-y-6 md:space-y-8">
+                                <div>
+                                        <h2 class="font-headline-lg text-headline-lg text-primary mb-2">about_me</h2>
+                                        <p class="font-code-block text-code-block text-tertiary">~/docs/obanilbrian_cv
+                                        </p>
+                                </div>
+                                <div class="font-body-lg text-body-lg text-on-surface-variant space-y-4 md:space-y-5">
+                                        <p>
+                                                I am a full stack developer with over 8+ years of experience dedicated
+                                                to building robust and scalable digital experiences. My approach
+                                                combines technical precision with thoughtful user interface design,
+                                                ensuring that every project is not only functional but also visually
+                                                compelling.
+                                        </p>
+                                        <p>
+                                                With a background rooted in problem-solving and systemic thinking, I
+                                                have extensive experience in the Finance, E-commerce, and iGaming
+                                                sectors. I hold a Bachelor’s Degree in Information Technology and thrive
+                                                in environments that require translating complex requirements into
+                                                clean, maintainable code.
+                                        </p>
+                                </div>
+                                <a class="inline-flex items-center space-x-2 bg-primary text-on-primary px-6 py-3 rounded hover:bg-primary-container transition-colors duration-200 font-code-block text-code-block"
+                                        href="/obanilbrian_cv.pdf" target="_blank">
+                                        <span>view_full_resume</span>
+                                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                                </a>
+                        </div>
+                </section>
+                <!-- Skills Section -->
+                <section class="space-y-6 md:space-y-8" id="skills">
+                        <div>
+                                <h2 class="font-headline-md text-headline-md text-primary mb-3 md:mb-4">technical_skills
+                                </h2>
+                                <div class="h-px w-full bg-gradient-to-r from-outline-variant to-transparent"></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <!-- Frontend -->
+                                <div
+                                        class="bg-surface-container border border-outline-variant rounded-lg p-6 md:p-8 hover:border-primary/50 transition-colors duration-200 group">
+                                        <div class="flex items-center space-x-2 mb-4 md:mb-5">
+                                                <span class="material-symbols-outlined text-tertiary">code</span>
+                                                <h3 class="font-code-block text-code-block text-on-surface">frontend.tsx
+                                                </h3>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2 md:gap-2.5">
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-primary-container text-on-primary-container border border-outline-variant font-label-md text-label-md">React</span>
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-primary-container text-on-primary-container border border-outline-variant font-label-md text-label-md">Next.js</span>
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-primary-container text-on-primary-container border border-outline-variant font-label-md text-label-md">HTML5</span>
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-primary-container text-on-primary-container border border-outline-variant font-label-md text-label-md">CSS3</span>
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-primary-container text-on-primary-container border border-outline-variant font-label-md text-label-md">JavaScript</span>
+                                        </div>
+                                </div>
+                                <!-- Backend -->
+                                <div
+                                        class="bg-surface-container border border-outline-variant rounded-lg p-6 md:p-8 hover:border-tertiary/50 transition-colors duration-200 group">
+                                        <div class="flex items-center space-x-2 mb-4 md:mb-5">
+                                                <span class="material-symbols-outlined text-tertiary">dns</span>
+                                                <h3 class="font-code-block text-code-block text-on-surface">backend.ts
+                                                </h3>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2 md:gap-2.5">
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-tertiary-container text-on-tertiary-container border border-outline-variant font-label-md text-label-md">Node.js</span>
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-tertiary-container text-on-tertiary-container border border-outline-variant font-label-md text-label-md">Express</span>
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-tertiary-container text-on-tertiary-container border border-outline-variant font-label-md text-label-md">REST
+                                                        API</span>
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-tertiary-container text-on-tertiary-container border border-outline-variant font-label-md text-label-md">Loopback.io</span>
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-tertiary-container text-on-tertiary-container border border-outline-variant font-label-md text-label-md">Apollo
+                                                        GraphQL</span>
+                                        </div>
+                                </div>
+                                <!-- Database & Tools -->
+                                <div
+                                        class="bg-surface-container border border-outline-variant rounded-lg p-6 md:p-8 hover:border-secondary/50 transition-colors duration-200 group">
+                                        <div class="flex items-center space-x-2 mb-4 md:mb-5">
+                                                <span class="material-symbols-outlined text-tertiary">build</span>
+                                                <h3 class="font-code-block text-code-block text-on-surface">
+                                                        infrastructure.yml</h3>
+                                        </div>
+                                        <div class="flex flex-wrap gap-2 md:gap-2.5">
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-secondary-container text-on-secondary-container border border-outline-variant font-label-md text-label-md">MongoDB</span>
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-secondary-container text-on-secondary-container border border-outline-variant font-label-md text-label-md">PostgreSQL</span>
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-secondary-container text-on-secondary-container border border-outline-variant font-label-md text-label-md">Git</span>
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-secondary-container text-on-secondary-container border border-outline-variant font-label-md text-label-md">AWS
+                                                        Lambda</span>
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-secondary-container text-on-secondary-container border border-outline-variant font-label-md text-label-md">CloudWatch</span>
+                                                <span
+                                                        class="px-2 py-1 rounded-sm bg-secondary-container text-on-secondary-container border border-outline-variant font-label-md text-label-md">Agile</span>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- Experience Section -->
+                <section class="space-y-6 md:space-y-8" id="experience">
+                        <div>
+                                <h2 class="font-headline-md text-headline-md text-primary mb-3 md:mb-4">work_experience
+                                </h2>
+                                <div class="h-px w-full bg-gradient-to-r from-outline-variant to-transparent"></div>
+                        </div>
+                        <div>
+                                <h4 class="font-headline-md text-headline-xs text-primary mb-3 md:mb-4"><span
+                                                class="text-tertiary">brian@portfolio</span><span
+                                                class="text-on-surface">:</span><span
+                                                class="text-primary-container">~$</span> git log --all</h4>
+                        </div>
+                        <div
+                                class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 md:p-8 font-code-block text-code-block overflow-x-auto space-y-8 md:space-y-10">
+                                <!-- Arch Global Services -->
+                                <div class="space-y-2">
+                                        <div class="git-commit">commit 8f3a1c9</div>
+                                        <div class="text-on-surface">Company: <span class="git-author">Arch Global
+                                                        Services</span> &lt;Senior Software Engineer&gt;</div>
+                                        <div class="text-on-surface">Date: <span class="git-date">Feb 2025 -
+                                                        Present</span></div>
+                                        <div class="pl-8 pt-2 text-on-surface-variant leading-relaxed">
+                                                feat(arch-global): implement internal automation and MongoDB data
+                                                quality tools
+                                        </div>
+                                        <div class="pl-8 pt-2 text-on-surface-variant leading-relaxed space-y-1.5">
+                                                <p>* Developed internal automation tools that reduced manual tasks by
+                                                        30%, improving team efficiency and productivity.</p>
+                                                <p>* Implemented data quality monitoring solutions for MongoDB
+                                                        databases, enhancing data integrity and reducing errors by 25%.
+                                                </p>
+                                        </div>
+                                </div>
+                                <!-- CoreX Studio -->
+                                <div class="space-y-2">
+                                        <div class="git-commit">commit d4e2b7a</div>
+                                        <div class="text-on-surface">Company: <span class="git-author">CoreX
+                                                        Studio</span> &lt;Senior Software Developer&gt;</div>
+                                        <div class="text-on-surface">Date: <span class="git-date">July 2022 - Feb
+                                                        2025</span></div>
+                                        <div class="pl-8 pt-2 text-on-surface-variant leading-relaxed">
+                                                perf(corex-studio): optimize React/Next.js architecture for 10k+
+                                                concurrent users
+                                        </div>
+                                        <div class="pl-8 pt-2 text-on-surface-variant leading-relaxed space-y-1.5">
+                                                <p>* Led a critical initiative to enhance platform scalability for
+                                                        10,000+ concurrent users, boosting site performance by 20%.</p>
+                                                <p>* Optimized React and Next.js architecture, cutting page load times
+                                                        by 15% and reducing server load by 25%.</p>
+                                                <p>* Delivered a faster, more robust, and highly available user
+                                                        experience for a high-traffic online casino platform.</p>
+                                        </div>
+                                </div>
+                                <!-- BrightStores -->
+                                <div class="space-y-2">
+                                        <div class="git-commit">commit 1a9c5f3</div>
+                                        <div class="text-on-surface">Company: <span class="git-author">BrightStores,
+                                                        Inc.</span> &lt;Front-end Developer&gt;</div>
+                                        <div class="text-on-surface">Date: <span class="git-date">Oct 2020 - July
+                                                        2022</span></div>
+                                        <div class="pl-8 pt-2 text-on-surface-variant leading-relaxed">
+                                                feat(brightstores): develop flagship e-commerce theme and migrate to
+                                                Next.js
+                                        </div>
+                                        <div class="pl-8 pt-2 text-on-surface-variant leading-relaxed space-y-1.5">
+                                                <p>* Developed a flagship e-commerce theme that cut new project
+                                                        development time by 30% and was adopted across 50+ client
+                                                        stores.</p>
+                                                <p>* Drove higher client retention by delivering high-quality custom
+                                                        solutions and maintaining 99.9% system uptime.</p>
+                                                <p>* Spearheaded the migration of company websites to Next.js,
+                                                        significantly improving SEO performance and core web vitals.</p>
+                                        </div>
+                                </div>
+                                <!-- SM Retail -->
+                                <div class="space-y-2">
+                                        <div class="git-commit">commit e7b2d41</div>
+                                        <div class="text-on-surface">Company: <span class="git-author">SM Retail,
+                                                        Inc.</span> &lt;IT Associate&gt;</div>
+                                        <div class="text-on-surface">Date: <span class="git-date">Oct 2019 - Sept
+                                                        2020</span></div>
+                                        <div class="pl-8 pt-2 text-on-surface-variant leading-relaxed">
+                                                feat(sm-retail): ship full-stack enterprise applications and AWS
+                                                serverless solutions
+                                        </div>
+                                        <div class="pl-8 pt-2 text-on-surface-variant leading-relaxed space-y-1.5">
+                                                <p>* Developed and maintained full-stack enterprise applications using
+                                                        Node.js and React, improving internal workflows and reducing
+                                                        manual processes by 25%.</p>
+                                                <p>* Implemented AWS serverless solutions that enhanced system
+                                                        scalability and reduced infrastructure costs by 20%.</p>
+                                                <p>* Collaborated with cross-functional teams to deliver high-impact
+                                                        projects that supported the company’s digital transformation
+                                                        initiatives.</p>
+                                        </div>
+                                </div>
+                                <!-- Metrobank -->
+                                <div class="space-y-2">
+                                        <div class="git-commit">commit 5c8f0e2</div>
+                                        <div class="text-on-surface">Company: <span class="git-author">Metrobank</span>
+                                                &lt;Programmer Analyst&gt;</div>
+                                        <div class="text-on-surface">Date: <span class="git-date">Dec 2018 - Sept
+                                                        2019</span></div>
+                                        <div class="pl-8 pt-2 text-on-surface-variant leading-relaxed">
+                                                feat(metrobank): build secure wealth management app and microservices
+                                                architecture
+                                        </div>
+                                        <div class="pl-8 pt-2 text-on-surface-variant leading-relaxed space-y-1.5">
+                                                <p>* Developed and maintained internal banking applications, improving
+                                                        transaction processing efficiency by 15%.</p>
+                                                <p>* Collaborated with cross-functional teams to implement new features
+                                                        and resolve critical bugs, enhancing overall system reliability.
+                                                </p>
+                                                <p>* Participated in the migration of legacy systems to modern
+                                                        technologies, contributing to a smoother transition and improved
+                                                        performance.</p>
+                                        </div>
+                                </div>
+                                <!-- Medilink -->
+                                <div class="space-y-2">
+                                        <div class="git-commit">commit 3b6a9d4</div>
+                                        <div class="text-on-surface">Company: <span class="git-author">Medilink Network,
+                                                        Inc.</span> &lt;Software Engineer&gt;</div>
+                                        <div class="text-on-surface">Date: <span class="git-date">June 2017 - Sept
+                                                        2018</span></div>
+                                        <div class="pl-8 pt-2 text-on-surface-variant leading-relaxed">
+                                                feat(medilink): engineer 30+ REST APIs and mentor junior developers
+                                        </div>
+                                        <div class="pl-8 pt-2 text-on-surface-variant leading-relaxed space-y-1.5">
+                                                <p>* Engineered and maintained 30+ REST APIs using Node.js and Express,
+                                                        supporting critical healthcare applications and improving data
+                                                        accessibility for medical professionals.</p>
+                                                <p>* Mentored junior developers, fostering a collaborative team
+                                                        environment and contributing to the professional growth of the
+                                                        engineering team.</p>
+                                                <p>* Collaborated with cross-functional teams to deliver high-quality
+                                                        software solutions that met the needs of healthcare providers
+                                                        and patients.</p>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- Projects Section -->
+                <section class="space-y-6 md:space-y-8" id="projects">
+                        <div>
+                                <h2 class="font-headline-md text-headline-md text-primary mb-3 md:mb-4">projects
+                                </h2>
+                                <div class="h-px w-full bg-gradient-to-r from-outline-variant to-transparent"></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+                                <!-- Project 1 (PsychSpaces) -->
+                                <article
+                                        class="bg-surface-container rounded-xl overflow-hidden border border-outline-variant group hover:-translate-y-1 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between h-full">
+                                        <div>
+                                                <!-- Card Visual Header -->
+                                                <div
+                                                        class="h-44 bg-surface-container-high relative border-b border-outline-variant flex items-center justify-between px-6 overflow-hidden">
+                                                        <!-- Dot Matrix Grid Background -->
+                                                        <div
+                                                                class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTQwLCAxNDUsIDE1OCwgMC4xNSkiLz48L3N2Zz4=')] opacity-70">
+                                                        </div>
+
+                                                        <!-- Shield Icon for Compliance/Security -->
+                                                        <div class="relative z-10 flex items-center justify-center w-12 h-12 rounded-lg bg-primary-container/20 border border-primary/20 text-primary shadow-sm group-hover:scale-110 transition-transform duration-300"
+                                                                aria-hidden="true">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-shield-check">
+                                                                        <path
+                                                                                d="M20 13c0 5-3.5 7.5-7.66 9.7a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 .76-.97l8-2a1 1 0 0 1 .48 0l8 2A1 1 0 0 1 20 6z" />
+                                                                        <path d="m9 12 2 2 4-4" />
+                                                                </svg>
+                                                        </div>
+
+                                                        <!-- Live Status Pill -->
+                                                        <span
+                                                                class="relative z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-md font-label-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                                                                <span
+                                                                        class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                                                                Completed / Live
+                                                        </span>
+                                                </div>
+                                                <!-- Card Content -->
+                                                <div class="p-6 space-y-4">
+                                                        <div class="flex items-start justify-between gap-4">
+                                                                <h3
+                                                                        class="font-headline-md text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-200 leading-tight">
+                                                                        PsychSpaces: White-Labeled Practice Management
+                                                                        SaaS
+                                                                </h3>
+                                                                <a href="#"
+                                                                        class="text-on-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary rounded p-1 flex-shrink-0"
+                                                                        aria-label="Visit PsychSpaces Live Demo">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                width="20" height="20"
+                                                                                viewBox="0 0 24 24" fill="none"
+                                                                                stroke="currentColor" stroke-width="2"
+                                                                                stroke-linecap="round"
+                                                                                stroke-linejoin="round"
+                                                                                class="lucide lucide-external-link">
+                                                                                <path d="M15 3h6v6" />
+                                                                                <path d="M10 14 21 3" />
+                                                                                <path
+                                                                                        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                                                        </svg>
+                                                                </a>
+                                                        </div>
+                                                        <p
+                                                                class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                                                A secure, white-labeled platform empowering clinical
+                                                                psychologists to independently manage their private
+                                                                teletherapy practices with complete brand autonomy.
+                                                                Engineered to bypass third-party marketplaces, the
+                                                                platform features a specialized tri-slot booking engine,
+                                                                manual payment verification, and secure patient
+                                                                workspaces for intake forms and homework. Architected
+                                                                with strict compliance to the Philippine Data Privacy
+                                                                Act (DPA), it utilizes row-level data isolation to
+                                                                guarantee patient confidentiality.
+                                                        </p>
+                                                </div>
+                                        </div>
+                                        <!-- Tech Stack Tags -->
+                                        <div class="px-6 pb-6 pt-2">
+                                                <div class="flex flex-wrap gap-2">
+                                                        <span
+                                                                class="px-2 py-1 rounded-sm bg-surface-container-high text-on-surface border border-outline-variant font-label-md text-label-md">Next.js</span>
+                                                        <span
+                                                                class="px-2 py-1 rounded-sm bg-surface-container-high text-on-surface border border-outline-variant font-label-md text-label-md">React</span>
+                                                        <span
+                                                                class="px-2 py-1 rounded-sm bg-surface-container-high text-on-surface border border-outline-variant font-label-md text-label-md">Node.js</span>
+                                                        <span
+                                                                class="px-2 py-1 rounded-sm bg-primary-container/20 text-primary border border-primary/20 font-label-md text-label-md font-semibold flex items-center gap-1">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                        height="12" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2.5"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-shield" aria-hidden="true">
+                                                                        <path
+                                                                                d="M20 13c0 5-3.5 7.5-7.66 9.7a1 1 0 0 1-.68 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 .76-.97l8-2a1 1 0 0 1 .48 0l8 2A1 1 0 0 1 20 6z" />
+                                                                </svg>
+                                                                DPA Compliant
+                                                        </span>
+                                                </div>
+                                        </div>
+                                </article>
+
+                                <!-- Project 2 (Placeholder WIP Card) -->
+                                <article
+                                        class="bg-surface-container/20 border-2 border-dashed border-outline-variant hover:border-primary/40 rounded-xl overflow-hidden flex flex-col justify-between h-full group hover:-translate-y-1 transition-all duration-300">
+                                        <div>
+                                                <!-- Card Header with custom dotted background and WIP badge -->
+                                                <div
+                                                        class="h-44 bg-surface-container-high/40 relative border-b border-dashed border-outline-variant flex items-center justify-between px-6 overflow-hidden">
+                                                        <!-- Gridlines or Blueprint structure -->
+                                                        <div
+                                                                class="absolute inset-0 bg-[radial-gradient(rgba(128,128,128,0.15)_1px,transparent_1px)] bg-[size:16px_16px] opacity-70">
+                                                        </div>
+
+                                                        <!-- Placeholder Code2 Icon -->
+                                                        <div class="relative z-10 flex items-center justify-center w-12 h-12 rounded-lg border border-dashed border-outline-variant/60 bg-surface-container-high/20 text-on-surface-variant/40 group-hover:scale-105 transition-transform duration-300"
+                                                                aria-hidden="true">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="22"
+                                                                        height="22" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-code-2">
+                                                                        <path d="m18 16 4-4-4-4" />
+                                                                        <path d="m6 8-4 4 4 4" />
+                                                                        <path d="m14.5 4-5 16" />
+                                                                </svg>
+                                                        </div>
+
+                                                        <!-- Work In Progress (WIP) Pill -->
+                                                        <span
+                                                                class="relative z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-md font-label-md bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                                                                <span
+                                                                        class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse"></span>
+                                                                Work in Progress (WIP)
+                                                        </span>
+                                                </div>
+                                                <!-- Card Content -->
+                                                <div class="p-6 space-y-4">
+                                                        <div class="flex items-start justify-between gap-4">
+                                                                <h3
+                                                                        class="font-headline-md text-headline-sm text-on-surface-variant/80 group-hover:text-primary transition-colors duration-200 leading-tight">
+                                                                        Project: [TBD // Under Development]
+                                                                </h3>
+                                                        </div>
+                                                        <p
+                                                                class="font-body-md text-body-md text-on-surface-variant/60 leading-relaxed italic">
+                                                                Currently architecting an upcoming platform. Tech stack
+                                                                decisions, feature specifications, and initial build
+                                                                releases will be updated here.
+                                                        </p>
+                                                </div>
+                                        </div>
+                                        <!-- Tech Stack Tags -->
+                                        <div class="px-6 pb-6 pt-2">
+                                                <div class="flex flex-wrap gap-2">
+                                                        <span
+                                                                class="px-2 py-1 rounded-sm bg-surface-container/20 text-on-surface-variant/50 border border-dashed border-outline-variant font-label-md text-label-md">[Stack
+                                                                Pending]</span>
+                                                        <span
+                                                                class="px-2 py-1 rounded-sm bg-surface-container/20 text-on-surface-variant/50 border border-dashed border-outline-variant font-label-md text-label-md">[SaaS
+                                                                Core]</span>
+                                                </div>
+                                        </div>
+                                </article>
+                        </div>
+                </section>
+        </main>
+        <!-- Footer -->
+        <footer
+                class="bg-surface-container-low text-on-surface-variant font-code-block text-code-block w-full py-6 md:py-8 border-t border-outline-variant">
+                <div
+                        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop gap-4 md:gap-0">
+                        <div class="font-label-md text-label-md text-secondary">
+                                © 2026 sys.admin // built_with_precision
+                        </div>
+                </div>
+        </footer>
+        <script>
+                const themeToggleBtn = document.getElementById('theme-toggle');
+                const themeToggleIcon = themeToggleBtn.querySelector('.material-symbols-outlined');
+
+                function updateIcon() {
+                        if (document.documentElement.classList.contains('dark')) {
+                                themeToggleIcon.textContent = 'light_mode';
+                        } else {
+                                themeToggleIcon.textContent = 'dark_mode';
+                        }
+                }
+
+                // Initial icon update on load
+                updateIcon();
+
+                themeToggleBtn.addEventListener('click', () => {
+                        const rect = themeToggleBtn.getBoundingClientRect();
+                        const x = rect.left + rect.width / 2;
+                        const y = rect.top + rect.height / 2;
+
+                        document.documentElement.style.setProperty('--click-x', x + 'px');
+                        document.documentElement.style.setProperty('--click-y', y + 'px');
+
+                        const toggleTheme = () => {
+                                if (document.documentElement.classList.contains('dark')) {
+                                        document.documentElement.classList.remove('dark');
+                                        localStorage.setItem('theme', 'light');
+                                } else {
+                                        document.documentElement.classList.add('dark');
+                                        localStorage.setItem('theme', 'dark');
+                                }
+                                updateIcon();
+                        };
+
+                        if (document.startViewTransition) {
+                                document.startViewTransition(toggleTheme);
+                        } else {
+                                toggleTheme();
+                        }
+                });
+        </script>
+</body>
+
+</html>
