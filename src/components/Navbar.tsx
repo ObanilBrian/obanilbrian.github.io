@@ -56,7 +56,7 @@ export function Navbar() {
           className="font-headline-lg text-headline-md text-primary hover:text-primary-container transition-all duration-200 opacity-80 scale-95"
           href="#"
         >
-          dev.init("Brian")
+          dev.init(&quot;Brian&quot;)
         </a>
         <div className="hidden md:flex space-x-lg md:space-x-8">
           <a

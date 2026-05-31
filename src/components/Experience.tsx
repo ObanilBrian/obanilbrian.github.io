@@ -16,12 +16,12 @@ export function Experience() {
           <span className="text-primary-container">~$</span> git log --all
         </h4>
       </div>
-      <div className="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 md:p-8 font-code-block text-code-block overflow-x-auto space-y-8 md:space-y-10">
+      <div className="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 md:p-8 font-code-block text-code-block break-words space-y-8 md:space-y-10">
         {/* Arch Global Services */}
         <div className="space-y-2">
           <div className="git-commit">commit 8f3a1c9</div>
           <div className="text-on-surface text-left">
-            Company: <span className="git-author">Arch Global Services</span> &lt;Senior Software Engineer&gt;
+            Company: <span className="git-author">Arch Global Services</span>&nbsp;&lt;Senior Software Engineer&gt;
           </div>
           <div className="text-on-surface text-left">
             Date: <span className="git-date">Feb 2025 - Present</span>
@@ -39,7 +39,7 @@ export function Experience() {
         <div className="space-y-2">
           <div className="git-commit">commit d4e2b7a</div>
           <div className="text-on-surface text-left">
-            Company: <span className="git-author">CoreX Studio</span> &lt;Senior Software Developer&gt;
+            Company: <span className="git-author">CoreX Studio</span>&nbsp;&lt;Senior Software Developer&gt;
           </div>
           <div className="text-on-surface text-left">
             Date: <span className="git-date">July 2022 - Feb 2025</span>
@@ -58,7 +58,7 @@ export function Experience() {
         <div className="space-y-2">
           <div className="git-commit">commit 1a9c5f3</div>
           <div className="text-on-surface text-left">
-            Company: <span className="git-author">BrightStores, Inc.</span> &lt;Front-end Developer&gt;
+            Company: <span className="git-author">BrightStores, Inc.</span>&nbsp;&lt;Front-end Developer&gt;
           </div>
           <div className="text-on-surface text-left">
             Date: <span className="git-date">Oct 2020 - July 2022</span>
@@ -77,7 +77,7 @@ export function Experience() {
         <div className="space-y-2">
           <div className="git-commit">commit e7b2d41</div>
           <div className="text-on-surface text-left">
-            Company: <span className="git-author">SM Retail, Inc.</span> &lt;IT Associate&gt;
+            Company: <span className="git-author">SM Retail, Inc.</span>&nbsp;&lt;IT Associate&gt;
           </div>
           <div className="text-on-surface text-left">
             Date: <span className="git-date">Oct 2019 - Sept 2020</span>
@@ -96,7 +96,7 @@ export function Experience() {
         <div className="space-y-2">
           <div className="git-commit">commit 5c8f0e2</div>
           <div className="text-on-surface text-left">
-            Company: <span className="git-author">Metrobank</span> &lt;Programmer Analyst&gt;
+            Company: <span className="git-author">Metrobank</span>&nbsp;&lt;Programmer Analyst&gt;
           </div>
           <div className="text-on-surface text-left">
             Date: <span className="git-date">Dec 2018 - Sept 2019</span>
@@ -115,7 +115,7 @@ export function Experience() {
         <div className="space-y-2">
           <div className="git-commit">commit 3b6a9d4</div>
           <div className="text-on-surface text-left">
-            Company: <span className="git-author">Medilink Network, Inc.</span> &lt;Software Engineer&gt;
+            Company: <span className="git-author">Medilink Network, Inc.</span>&nbsp;&lt;Software Engineer&gt;
           </div>
           <div className="text-on-surface text-left">
             Date: <span className="git-date">June 2017 - Sept 2018</span>

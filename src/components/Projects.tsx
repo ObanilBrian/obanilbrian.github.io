@@ -10,14 +10,11 @@ export function Projects() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
         {/* Project 1 (PsychSpaces) */}
-        <article className="bg-surface-container rounded-xl overflow-hidden border border-outline-variant group hover:-translate-y-1 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between h-full">
+        {/* <article className="bg-surface-container rounded-xl overflow-hidden border border-outline-variant group hover:-translate-y-1 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between h-full">
           <div>
-            {/* Card Visual Header */}
             <div className="h-44 bg-surface-container-high relative border-b border-outline-variant flex items-center justify-between px-6 overflow-hidden">
-              {/* Dot Matrix Grid Background */}
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTQwLCAxNDUsIDE1OCwgMC4xNSkiLz48L3N2Zz4=')] opacity-70"></div>
 
-              {/* Shield Icon for Compliance/Security */}
               <div
                 className="relative z-10 flex items-center justify-center w-12 h-12 rounded-lg bg-primary-container/20 border border-primary/20 text-primary shadow-sm group-hover:scale-110 transition-transform duration-300"
                 aria-hidden="true"
@@ -25,13 +22,11 @@ export function Projects() {
                 <LuShieldCheck size={24} />
               </div>
 
-              {/* Live Status Pill */}
               <span className="relative z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-md font-label-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 Completed / Live
               </span>
             </div>
-            {/* Card Content */}
             <div className="p-6 space-y-4">
               <div className="flex items-start justify-between gap-4">
                 <h3 className="font-headline-md text-headline-sm text-on-surface group-hover:text-primary transition-colors duration-200 leading-tight">
@@ -54,7 +49,6 @@ export function Projects() {
               </p>
             </div>
           </div>
-          {/* Tech Stack Tags */}
           <div className="px-6 pb-6 pt-2">
             <div className="flex flex-wrap gap-2">
               <span className="px-2 py-1 rounded-sm bg-surface-container-high text-on-surface border border-outline-variant font-label-md text-label-md">
@@ -72,7 +66,7 @@ export function Projects() {
               </span>
             </div>
           </div>
-        </article>
+        </article> */}
 
         {/* Project 2 (Placeholder WIP Card) */}
         <article className="bg-surface-container/20 border-2 border-dashed border-outline-variant hover:border-primary/40 rounded-xl overflow-hidden flex flex-col justify-between h-full group hover:-translate-y-1 transition-all duration-300">

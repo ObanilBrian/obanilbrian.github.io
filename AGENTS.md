@@ -29,6 +29,7 @@ Transform the existing portfolio assets located in the `original_files/` directo
 - Let compiler infer return types unless annotation adds clarity.
 - Options object for 3+ params, optional flags, or ambiguous args.
 - Hypothesis-driven debugging: 1-3 causes, validate most likely first.
+- Do not implement a workaround. Find the real root cause and fix it.
 
 ### Token efficiency
 - Skip recaps unless the result is ambiguous or you need more input.
@@ -40,6 +41,7 @@ Transform the existing portfolio assets located in the `original_files/` directo
 - Conventional Commits: `type: summary` without scope. The summary should be a short, specific sentence that explains what changed and where or why, not a vague phrase. 
 - Types: `feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert`. 
 - `BREAKING CHANGE: <reason>` footer when needed.
+- Do not commit automatically, ask me first before commiting.
 
 ### Env
 - All env vars validated in `Env.ts`; never read `process.env` directly.

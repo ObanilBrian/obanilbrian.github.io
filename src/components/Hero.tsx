@@ -2,8 +2,8 @@ import * as React from "react";
 
 export function Hero() {
   return (
-    <section className="flex flex-col items-center justify-center min-h-[614px]" id="root">
-      <div className="w-full max-w-4xl bg-surface-container-lowest rounded-lg border border-outline-variant shadow-lg overflow-hidden backdrop-blur-sm">
+    <section className="flex flex-col justify-center min-h-[614px] w-full" id="root">
+      <div className="w-full max-w-4xl mx-auto min-w-0 bg-surface-container-lowest rounded-lg border border-outline-variant shadow-lg overflow-hidden backdrop-blur-sm">
         {/* Terminal Header */}
         <div className="bg-surface-container px-md py-sm flex items-center justify-between border-b border-outline-variant">
           <div className="flex space-x-2">
