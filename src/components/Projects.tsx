@@ -10,7 +10,7 @@ export function Projects() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
         {/* Project 1 (PsychSpaces) */}
-        <article className="bg-surface-container rounded-xl overflow-hidden border border-outline-variant group hover:-translate-y-1 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between h-full">
+        {/* <article className="bg-surface-container rounded-xl overflow-hidden border border-outline-variant group hover:-translate-y-1 hover:border-primary/50 transition-all duration-300 flex flex-col justify-between h-full">
           <div>
             <div className="h-44 bg-surface-container-high relative border-b border-outline-variant flex items-center justify-between px-6 overflow-hidden">
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTQwLCAxNDUsIDE1OCwgMC4xNSkiLz48L3N2Zz4=')] opacity-70"></div>
@@ -66,7 +66,7 @@ export function Projects() {
               </span>
             </div>
           </div>
-        </article>
+        </article> */}
 
         {/* Project 2 (Placeholder WIP Card) */}
         <article className="bg-surface-container/20 border-2 border-dashed border-outline-variant hover:border-primary/40 rounded-xl overflow-hidden flex flex-col justify-between h-full group hover:-translate-y-1 transition-all duration-300">
